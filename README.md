@@ -1,11 +1,11 @@
-# Enhanced Edge IoT System for Hands-Free Control & Energy Monitoring
+# Enhanced Edge IoT System for Hands-Free Control & Energy Monitoring.
 
-## 🚀 Project Overview
+## 🚀 Project Overview:
 This project is an **AI-Integrated Smart Home Automation System** designed to prioritize safety, energy efficiency, and accessibility. It moves beyond traditional switching by integrating **Computer Vision (MediaPipe)** for contactless gesture control, **Real-time Energy Auditing (ACS712)**, and an **Active Safety System (MQ135)** that automatically ventilates the room during gas leaks.
 
 All data is visualized locally on a **16x2 LCD** and remotely via the **Blynk IoT Cloud**, offering detailed analytics graphs (Power vs. Time, Gas vs. Time).
 
-## 👥 Team Members
+## 👥 Team Members:
 * **Atiksh Singh** - Computer Science & Engineering.
 * **Arjun Singh** - Computer Science & Engineering.
 * **Manish Nehra** - Computer Science & Engineering.
@@ -13,7 +13,7 @@ All data is visualized locally on a **16x2 LCD** and remotely via the **Blynk Io
 
 ---
 
-## 🛠️ Key Features
+## 🛠️ Key Features:
 1.  **👋 Contactless Gesture Control:** * Uses a Laptop Webcam + Python (MediaPipe) to detect hand gestures.
     * **Open Palm:** Turns Appliance (LED) ON.
     * **Closed Fist:** Turns Appliance OFF.
@@ -30,27 +30,28 @@ All data is visualized locally on a **16x2 LCD** and remotely via the **Blynk Io
 
 ---
 
-## ⚙️ Hardware Tech Stack
+## ⚙️ Hardware Tech Stack:
 * **Microcontroller:** ESP32 (DOIT DEVKIT V1)
 * **Sensors:** MQ135 (Gas/Smoke Detection), ACS712 (Current/Power Monitoring)
 * **Actuators:** DC Motor (Exhaust Fan), Piezo Buzzer, LED (Load).
 * **Display:** 16x2 LCD with I2C Module.
 
-## 💻 Software Tech Stack
+## 💻 Software Tech Stack:
 * **Firmware:** C++ (Arduino IDE)
 * **AI Engine:** Python 3.x, OpenCV, MediaPipe
 * **IoT Cloud:** Blynk (HTTP API & Mobile App)
 
 ---
 
-## 📸 System Architecture
+## 📸 System Architecture:
 *(Upload the Block Diagram image in `diagrams/` and link it here)*
+
 
 ---
 
 ## 🚀 How to Run the Project
 
-### Step 1: Hardware Setup
+### Step 1: (Hardware Setup)
 Connect the components as per the circuit diagram found in `docs/`:
 * **MQ135 (Analog):** Pin D34
 * **ACS712 (Analog):** Pin D35
@@ -58,13 +59,13 @@ Connect the components as per the circuit diagram found in `docs/`:
 * **LED (Load):** Pin D23
 * **LCD (I2C):** SDA (D21), SCL (D22)
 
-### Step 2: Firmware Upload
+### Step 2: (Firmware Upload)
 1.  Open `firmware/main_esp32_code.ino` in Arduino IDE.
 2.  Install the required libraries: `Blynk`, `LiquidCrystal_I2C`, `WiFi`.
 3.  Update the `BLYNK_AUTH_TOKEN`, `WIFI_SSID`, and `WIFI_PASS` in the code.
 4.  Upload to your ESP32 board.
 
-### Step 3: AI Gesture Script
+### Step 3: (AI Gesture Script)
 1.  Install Python dependencies:
     ```bash
     pip install -r requirements.txt
@@ -77,12 +78,12 @@ Connect the components as per the circuit diagram found in `docs/`:
 
 ---
 
-## 📊 Results
+## 📊 Results:
 * **Latency:** Gesture commands are executed in under 2 seconds.
 * **Safety:** The exhaust fan triggers automatically when gas levels exceed the threshold.
 * **Accuracy:** The ACS712 sensor provides linear current readings calibrated to a zero-point of ~2.3V.
 
-## 🔮 Future Scope
+## 🔮 Future Scope:
 * Integration of multiple loads for complex gesture control.
 * Automatic solenoid valve control to shut off gas supply during leaks.
 * Short-circuit auto-cutoff protection.
